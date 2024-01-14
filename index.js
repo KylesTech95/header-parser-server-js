@@ -33,6 +33,9 @@ app.get('/api/whoami', function (req, res) {
   console.log(ip)
   console.log(lang)
   console.log(soft)
+
+  //res.json()
+  res.json({ipaddress:`${ip}`,language:`${lang}`,software:`${soft}`})
 });
 
 // listen for requests :)
