@@ -26,8 +26,9 @@ app.get('/', function (req, res) {
 "language":"en-US,en;q=0.9",
 "software":"Mozilla/5.0 (X11; CrOS x86_64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"}*/
 app.get('/api/whoami', function (req, res) {
-  return null
-  
+  let ip = req.ip; //ipaddress
+  let lang = req.headers["accept-language"]; //language
+  let soft = req.headers["user-agent"] //software
 });
 
 // listen for requests :)
